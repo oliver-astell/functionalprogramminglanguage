@@ -1,0 +1,22 @@
+
+let func(x: int) = x+HELLO;
+
+const HELLO = 42;
+
+def export_test(cond: bool) {
+    export success = cond;
+    export value: String;
+
+    if cond {
+        value = "Yippee!!!"
+    }
+}
+
+def main() {
+    let test_final = export_test()
+    if test_final.success {
+        print(test_final.value)
+    } else {
+        print(test_final.value)         // no null values
+    }
+}
